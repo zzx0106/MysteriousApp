@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <mytapp.xmz.com.mysteriousapp.widget.GifView
+        android:id="@+id/qiwen_gifview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:gif="@mipmap/lodinggif" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/qiwen_fragment_swf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/qiwen_fragment_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

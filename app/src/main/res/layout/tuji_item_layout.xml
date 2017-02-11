@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="290dp">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/tuji_item_img"
+        android:src="@mipmap/tuji_item_loading"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+    <TextView
+        android:id="@+id/tuji_picNum"
+        android:textSize="12sp"
+        android:background="@drawable/tuji_shape_1"
+        android:padding="3dp"
+        android:text="0图"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:background="#BBBBBB"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/tuji_item_text1"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"
+            android:text="1111111111"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tuji_item_text2"
+
+            android:text="0评价"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/welcome_layout"
+
+    tools:context=".activity.WelcomeActivity">
+    <ImageView
+        android:src="@mipmap/welcome"
+        android:visibility="gone"
+        android:id="@+id/welcome_bigimg"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/welcome_img"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/welcome_img"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/welcome_text1"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="奇闻"/>
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/welcome_text2"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="世界"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tuji_child_text_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/6"
+        android:layout_margin="5dp"
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:id="@+id/tuji_child_text_title"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/tuji_child_text_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:text="222222222222222222222"/>
+    <TextView
+        android:id="@+id/tuji_child_text_content"
+        android:layout_below="@id/tuji_child_text_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#E4E4E4"
+        android:text="\t\t"/>
+
+</RelativeLayout>

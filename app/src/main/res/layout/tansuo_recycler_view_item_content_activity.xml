@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--顶部布局-->
+    <RelativeLayout
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageButton
+            android:id="@+id/tansuo_recyclerView_item_content_back"
+            android:gravity="center"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:src="@mipmap/btn_black_back_normal"
+            android:layout_marginLeft="8dp"
+            android:layout_width="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:id="@+id/tansuo_recyclerView_item_content_share"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:src="@mipmap/new_more_titlebar_day_normal"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <!--下划线-->
+    <TextView
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1sp" />
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+    <!--滑动视图-->
+    <mytapp.xmz.com.mysteriousapp.modules.tansuo.widget.TansuoCustomScrollView
+        android:id="@+id/tansuo_recyclerView_item_content_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--弥补空白高度-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="72dp" />
+            <WebView
+                android:id="@+id/tansuo_recyclerView_item_content_webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </WebView>
+
+            <!--便于整体隐藏-->
+            <LinearLayout
+                android:id="@+id/tansuo_recyclerView_item_content_hot"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <!--热门推荐-->
+            <TextView
+                android:text="热门推荐"
+                android:textStyle="normal"
+                android:textColor="#222"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--下划线-->
+            <TextView
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="1sp" />
+            <!--RecyclerView-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tansuo_recyclerView_item_content_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </mytapp.xmz.com.mysteriousapp.modules.tansuo.widget.TansuoCustomScrollView>
+          <!--头部-->
+          <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="72dp"
+              android:background="@color/white"
+              android:id="@+id/tansuo_recyclerView_item_content_head">
+              <!--标题-->
+              <TextView
+                  android:id="@+id/tansuo_recyclerView_item_content_title"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentTop="true"
+                  android:textStyle="normal"
+                  android:textColor="#222"
+                  android:textSize="15sp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+              <!--作者，时间，阅读数-->
+              <TextView
+                  android:id="@+id/tansuo_recyclerView_item_content_writer"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_width="wrap_content"
+                  android:textSize="10sp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_height="wrap_content"/>
+              <TextView
+                  android:id="@+id/tansuo_recyclerView_item_content_clik"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:layout_width="wrap_content"
+                  android:textSize="10sp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_height="wrap_content"/>
+          </RelativeLayout>
+
+     </RelativeLayout>
+
+    <!--评论-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/tansuo_recyclerView_item_content_chat"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="我来说两句..."
+            android:textSize="12sp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tansuo_recyclerview_item_shap"
+            android:layout_height="36dp" />
+        <mytapp.xmz.com.mysteriousapp.modules.tansuo.widget.TansuoRecyclerViewCommentNumCustomView
+           android:id="@+id/tansuo_recyclerView_item_content_customView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:src="@mipmap/article_comment_day"/>
+        <ImageView
+            android:id="@+id/tansuo_recyclerView_item_content_collect"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/tansuo_recyclerview_item_collect"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/tansuo_recyclerview_item_shareToAll"
+            android:src="@mipmap/article_share_day"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="13dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    </LinearLayout>
+    <!--过渡动画-->
+    <!--<ImageView
+        android:id="@+id/tansuo_recyclerview_item_imageView_anim"
+        android:layout_centerInParent="true"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:src="@drawable/tansuo_loadingdata_frameanimation"/>-->
+    <mytapp.xmz.com.mysteriousapp.widget.GifView
+        android:id="@+id/tansuo_recyclerview_item_imageView_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:gif="@mipmap/lodinggif" />
+
+</RelativeLayout>

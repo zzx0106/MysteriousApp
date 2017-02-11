@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mytapp.xmz.com.mysteriousapp.activity.HomeActivity">
+
+
+    <mytapp.xmz.com.mysteriousapp.widget.MyDrawerLayout
+        android:id="@+id/home_mdrawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#EA2000">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="奇闻世界"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <ImageView
+                    android:id="@+id/home_head"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/home_mine"/>
+                <ImageView
+                    android:id="@+id/home_set"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/ic_sign"/>
+            </RelativeLayout>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/home_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabIndicatorColor="#ff0000"
+                app:tabSelectedTextColor="#ff0000"
+                app:tabTextColor="#77000000">
+
+            </android.support.design.widget.TabLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_login"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#33000000">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/home_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="点击登录"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/home_changepassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="修改密码"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/home_cleanuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_changepassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="清除缓存"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/home_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_cleanuser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="关于我们"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/home_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_aboutus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="退出登录"
+                android:visibility="gone"
+                android:textColor="#ff0000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </mytapp.xmz.com.mysteriousapp.widget.MyDrawerLayout>
+
+</LinearLayout>

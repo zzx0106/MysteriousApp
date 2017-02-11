@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- 操作栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+        <ImageView
+            android:id="@+id/tuijian_child_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/btn_black_back_night" />
+
+        <ImageButton
+            android:id="@+id/tuijian_child_content_share"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tuijian_child_back"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="#FFF"
+            android:src="@mipmap/new_more_titlebar_day_normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- 自定义ScrollView -->
+        <mytapp.xmz.com.mysteriousapp.modules.tuijian.widget.MyScrollView
+            android:id="@+id/tuijian_child_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+                <WebView
+                    android:id="@+id/tuijian_child_webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></WebView>
+            </LinearLayout>
+        </mytapp.xmz.com.mysteriousapp.modules.tuijian.widget.MyScrollView>
+
+        <!-- 标题栏 -->
+        <LinearLayout
+            android:id="@+id/tuijian_child_ll"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFF"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tuijian_child_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tuijian_child_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tuijian_child_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tuijian_child_source"
+                    android:textColor="#8000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tuijian_child_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#8000"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 播放动画的控件 -->
+        <mytapp.xmz.com.mysteriousapp.widget.GifView
+            android:id="@+id/tuijian_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tuijian_loading"
+            app:gif="@mipmap/lodinggif"/>
+    </RelativeLayout>
+
+    <!--评论-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tuijian_child_content_chat"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/tansuo_recyclerview_item_shap"
+            android:text="我来说两句..."
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/tuijian_child_item_content_customView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:src="@mipmap/article_comment_day" />
+
+        <ImageView
+            android:id="@+id/tuijian_child__item_content_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:background="@null"
+            android:src="@drawable/tansuo_recyclerview_item_collect" />
+
+        <ImageView
+            android:id="@+id/tuijian_child_item_shareToAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:src="@mipmap/article_share_day" />
+    </LinearLayout>
+
+</LinearLayout>

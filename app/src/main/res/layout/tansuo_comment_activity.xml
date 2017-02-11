@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--顶部布局-->
+    <RelativeLayout
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageButton
+            android:id="@+id/tansuo_comment_back"
+            android:gravity="center"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:src="@mipmap/btn_black_back_normal"
+            android:layout_marginLeft="8dp"
+            android:layout_width="64dp"
+            android:layout_marginStart="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="全部评论"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#C0C0C0"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="全部评论" />
+
+    <ListView
+        android:id="@+id/tansuo_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </ListView>
+
+   </LinearLayout>
+    <!--评论-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="4dp"
+        android:background="@color/white"
+        android:gravity="center">
+        <Button
+            android:id="@+id/tansuo_comment_chat"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="我来说两句..."
+            android:textSize="12sp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/tansuo_recyclerview_item_shap"
+            android:layout_height="36dp" />
+        <mytapp.xmz.com.mysteriousapp.modules.tansuo.widget.TansuoRecyclerViewCommentNumCustomView
+            android:id="@+id/tansuo_comment_customView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:src="@mipmap/article_comment_day"/>
+        <!--<ImageView
+            android:id="@+id/tansuo_comment_collect"
+            android:layout_width="wrap_content"
+            android:background="@null"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/tansuo_recyclerview_item_collect"
+            android:layout_height="wrap_content" />-->
+        <ImageButton
+            android:id="@+id/tansuo_comment_shareToAll"
+            android:src="@mipmap/article_share_day"
+            android:background="@drawable/tansuo_recyclerview_item_press"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="13dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--&lt;!&ndash;过渡动画&ndash;&gt;
+    <ImageView
+        android:id="@+id/tansuo_comment_imageView_anim"
+        android:layout_centerInParent="true"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:src="@drawable/tansuo_loadingdata_frameanimation"/>-->
+    <mytapp.xmz.com.mysteriousapp.widget.GifView
+        android:id="@+id/tansuo_comment_imageView_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:gif="@mipmap/lodinggif" />
+
+    <!--listView的空内容视图 android:text="暂时没有评论~~~"-->
+    <TextView
+        android:id="@+id/tansuo_comment_listView_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="暂时没有评论~~~"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
